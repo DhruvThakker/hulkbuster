@@ -1,6 +1,6 @@
 import requests
 
-def printAuthorName()
+def printAuthorName():
     print "Dhruv Thakker"
 
 def getOAuthToken(client_id,client_secret,username,password,grant_type,host):
