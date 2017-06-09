@@ -1,3 +1,7 @@
+import SocketServer
+import BaseHTTPServer
+import SimpleHTTPServer
+
 import requests
 
 def printAuthorName():
@@ -57,3 +61,25 @@ def getCourseInfo(host,course_id):
     response = requests.get(url)
 
     return response
+
+
+
+def startMultiServer(reqPort=None):
+    class ThreadingSimpleServer(SocketServer.ThreadingMixIn,
+                       BaseHTTPServer.HTTPServer):
+        pass
+    import sys
+    if reqPort:
+        port = int(reqPort)
+    else:
+        port = 8000
+
+    server = ThreadingSimpleServer(('', port), SimpleHTTPServer.SimpleHTTPRequestHandler)
+
+    print "Server Running on you localhost or lan on port :"+port
+    try:
+        while 1:
+            sys.stdout.flush()
+            server.handle_request()
+    except KeyboardInterrupt:
+        print "Finished"
