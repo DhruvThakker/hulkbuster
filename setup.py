@@ -1,11 +1,11 @@
 from setuptools import setup
 
 setup(name='hulkbuster',
-      version='0.1',
-      description='The funniest joke in the world',
+      version='0.01',
+      description='IITBombayX EDX API',
       url='https://github.com/DhruvThakker/hulkbuster',
-      author='Flying Circus',
-      author_email='flyingcircus@example.com',
+      author='HulkBuster441',
+      author_email='dthakker1997@gmail.com',
       license='MIT',
       packages=['hulkbuster'],
       zip_safe=False)
