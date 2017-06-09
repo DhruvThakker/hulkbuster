@@ -1,7 +1,7 @@
 from setuptools import setup
 
 setup(name='hulkbuster',
-      version='0.01',
+      version='0.2',
       description='IITBombayX EDX API',
       url='https://github.com/DhruvThakker/hulkbuster',
       author='HulkBuster441',

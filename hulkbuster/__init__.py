@@ -1,5 +1,8 @@
 import requests
 
+def printAuthorName()
+    print "Dhruv Thakker"
+
 def getOAuthToken(client_id,client_secret,username,password,grant_type,host):
 
     url = "http://"+host+"/oauth2/access_token"
